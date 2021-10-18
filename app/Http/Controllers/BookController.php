@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Payment\TripayController;
 use App\Models\Book;
 
 class BookController extends Controller
@@ -19,6 +20,8 @@ class BookController extends Controller
 
     public function checkout(Book $book)
     {
-        return view('book.checkout', compact('book'));
+        $tripay = new TripayController();
+        $channels = $tripay->getPaymentChannels();
+        return view('book.checkout', compact('book', 'channels'));
     }
 }

@@ -1,5 +1,5 @@
 <div class="flex items-center justify-between">
-    <h1 class="text-primary font-bold text-2xl">Book Store</h1>
+    <h1 class="text-primary font-bold text-2xl">Raden Febri Store</h1>
     @guest
     <div class="space-x-3">
         <a href="{{ route('login') }}" class="rounded-md px-4 py-2 text-sm hover:bg-gray-100 transition duration-300 ease-in-out">Sign in</a>

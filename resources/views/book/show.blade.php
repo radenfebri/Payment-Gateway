@@ -2,7 +2,7 @@
 
 @section('content')
 <a href="{{ route('home') }}" class="mt-6 text-sm text-primary hover:text-black transition duration-300 ease-in-out inline-block">
-    < Kembali
+    <b>< Kembali</b>
 </a>
 <div class="flex items-center mt-6">
     <img class="h-80 object-contain rounded-md" src="{{ asset('storage/' . $book->cover_image) }}" alt="">

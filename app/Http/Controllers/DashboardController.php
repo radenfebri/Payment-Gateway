@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaction;
+
 class DashboardController extends Controller
 {
     public function index()
     {
-         return view('dashboard');
+        $transactions = Transaction::latest()->get();
+
+        return view('dashboard', compact('transactions'));
     }
 }
